@@ -91,6 +91,11 @@ class DifferentialDriveRobot(GenericRobot):
         self._limit_vel_j[1, 0:3] = np.array([4., 4., 10.])
         self.set_acceleration_limits()
 
+    def reset_limits(self, **kwargs):
+        """Reset the limits if is needed."""
+        pass
+
+
     def get_observation_space(self) -> gym.spaces.Dict:
         """Gets the observation space for a differential drive robot.
 

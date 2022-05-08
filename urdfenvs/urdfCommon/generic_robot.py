@@ -60,6 +60,12 @@ class GenericRobot(ABC):
     def read_limits(self) -> None:
         """Read and set the joint limits."""
         pass
+    
+    @abstractmethod
+    def reset_limits(self, **kwargs):
+        """Reset the limits if is needed."""
+        pass
+
 
     @abstractmethod
     def set_acceleration_limits(self):
